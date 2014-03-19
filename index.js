@@ -1,4 +1,4 @@
-/* Compiled by kdc on Wed Mar 19 2014 00:12:37 GMT+0000 (UTC) */
+/* Compiled by kdc on Wed Mar 19 2014 22:10:13 GMT+0000 (UTC) */
 (function() {
 /* KDAPP STARTS */
 /* BLOCK STARTS: /home/dicle/Applications/Lacoste.kdapp/index.coffee */
@@ -55,12 +55,28 @@ LacosteController = (function(_super) {
   } else {
     return KD.registerAppClass(LacosteController, {
       name: "Lacoste",
-      routes: {
-        "/:name?/Lacoste": null,
-        "/:name?/Apps/dicle/Lacoste/run": null
-      },
+      route: "/:name?/Lacoste",
       dockPath: "/Apps/dicle/Lacoste/run",
-      behavior: "application"
+      behavior: "application",
+      menu: {
+        items: [
+          {
+            title: "Create a new App",
+            eventName: "create"
+          }, {
+            type: "separator"
+          }, {
+            title: "Save",
+            eventName: "save"
+          }, {
+            title: "Save All",
+            eventName: "saveAll"
+          }, {
+            title: "Close All",
+            eventName: "closeAll"
+          }
+        ]
+      }
     });
   }
 })();

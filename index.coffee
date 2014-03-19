@@ -31,8 +31,15 @@ do ->
 
     KD.registerAppClass LacosteController,
       name     : "Lacoste"
-      routes   :
-        "/:name?/Lacoste" : null
-        "/:name?/Apps/dicle/Lacoste/run" : null
+      route    : "/:name?/Lacoste"
       dockPath : "/Apps/dicle/Lacoste/run"
       behavior : "application"
+      menu     :
+        items  : [
+          { title     : "Create a new App",    eventName : "create" }
+          { type      : "separator" }
+          { title     : "Save",                eventName : "save" }
+          { title     : "Save All",            eventName : "saveAll" }
+          { title     : "Close All",           eventName : "closeAll" }
+        ]
+ 
