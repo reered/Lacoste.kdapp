@@ -6,7 +6,7 @@ class LacosteMainView extends KDView
 
   viewAppended:->
     @addSubView new KDView
-      partial  : "Welcome to Lacoste app!"
+      partial  : "Welcome to sssssss app!"
       cssClass : "welcome-view"
 
 class LacosteController extends AppController
@@ -31,8 +31,10 @@ do ->
 
     KD.registerAppClass LacosteController,
       name     : "Lacoste"
-      route    : "/:name?/Lacoste"
-      dockPath : "/Apps/dicle/Lacoste/run"
+      routes   :
+        "/:name?/Lacoste" : null
+        "/:name?/dicle/Apps/Lacoste" : null
+      dockPath : "/dicle/Apps/Lacoste"
       behavior : "application"
       menu     :
         items  : [

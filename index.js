@@ -1,7 +1,7 @@
-/* Compiled by kdc on Wed Mar 19 2014 22:10:13 GMT+0000 (UTC) */
+/* Compiled by kdc on Thu Mar 20 2014 00:17:54 GMT+0000 (UTC) */
 (function() {
 /* KDAPP STARTS */
-/* BLOCK STARTS: /home/dicle/Applications/Lacoste.kdapp/index.coffee */
+/* BLOCK STARTS: index.coffee */
 var LacosteController, LacosteMainView,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
@@ -19,7 +19,7 @@ LacosteMainView = (function(_super) {
 
   LacosteMainView.prototype.viewAppended = function() {
     return this.addSubView(new KDView({
-      partial: "Welcome to Lacoste app!",
+      partial: "Welcome to sssssss app!",
       cssClass: "welcome-view"
     }));
   };
@@ -55,8 +55,11 @@ LacosteController = (function(_super) {
   } else {
     return KD.registerAppClass(LacosteController, {
       name: "Lacoste",
-      route: "/:name?/Lacoste",
-      dockPath: "/Apps/dicle/Lacoste/run",
+      routes: {
+        "/:name?/Lacoste": null,
+        "/:name?/dicle/Apps/Lacoste": null
+      },
+      dockPath: "/dicle/Apps/Lacoste",
       behavior: "application",
       menu: {
         items: [
